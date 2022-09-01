@@ -1,0 +1,30 @@
+{
+  "name": "west-ferry",
+  "version": "1.0.0",
+  "description": "indie band wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded style.scss:style.css",
+    "sass-prod": "sass --no-source-map --style=compressed style.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bszyk/wf_v3.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "music",
+    "diy",
+    "band"
+  ],
+  "author": "Brian Siklinski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bszyk/wf_v3/issues"
+  },
+  "homepage": "https://github.com/bszyk/wf_v3#readme",
+  "devDependencies": {
+    "sass": "^1.54.7"
+  }
+}

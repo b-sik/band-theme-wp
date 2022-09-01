@@ -1,0 +1,184 @@
+/*!
+Theme Name: 	Bootsrap on WordPress
+Theme URI: 		https://bootstraponwordpress.com/
+Description: 	Bootstrap 5 on Wordpress
+Version: 		4.1.0
+Author: 		Babobski
+Author URI: 	https://www.babobski.nl
+Tags: 			babobski, bootstrap, basic theme
+*/
+
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+$primary: #f7cb15;
+$secondary: #4cb5ae;
+$dark: #12131d;
+$light: $gray-200;
+$info: #177e89;
+
+$body-bg: $dark;
+$body-color: $light;
+
+@import 'scss/bootstrap/bootstrap.scss';
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+// $navbar-dark-toggler-icon-bg: none;
+// $navbar-light-toggler-icon-bg: none;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+caption {
+  font-size: 0.75rem;
+}
+
+h3 {
+  color: $info !important;
+  text-transform: lowercase !important;
+}
+
+h5,
+small {
+  color: $body-bg;
+
+  > em,
+  > time {
+    color: $body-color;
+  }
+}
+
+.h1.brand {
+  font-family: 'Anonymous Pro', monospace !important;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.nav-item .nav-link {
+  text-transform: uppercase !important;
+  color: $dark !important;
+
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+.card:not(.about) {
+  background-color: $gray-100 !important;
+
+  .list-group-item {
+    background-color: $gray-100 !important;
+  }
+}
+
+.hero-height {
+  @include media-breakpoint-down(lg) {
+    height: 30vh;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 60vh;
+  }
+}
+
+.post-img {
+  &:hover {
+    @include media-breakpoint-up(lg) {
+      transform: scale(1.1);
+      transition: all 0.2s;
+    }
+  }
+}
+
+.mobile-menu {
+    .navbar-collapse,
+    .navbar-nav {
+      min-height: 100vh;
+  
+      .nav-item {
+        @extend .h2;
+  
+        .nav-link {
+          @extend .px-3;
+        }
+      }
+    }
+  }
+  
+  .carousel .card-deck {
+    .card {
+      @include media-breakpoint-up(xl) {
+        max-width: 320px !important;
+      }
+  
+      @include media-breakpoint-down(xl) {
+        max-width: 260px !important;
+      }
+    }
+  
+    &.carousel-item-right,
+    &.carousel-item-left,
+    &.carousel-item-prev,
+    &.carousel-item-next,
+    &.active {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    &.active {
+      @extend .justify-self-center !optional;
+    }
+  }
+
+  section.container:not(#news) {
+    @extend .py-5;
+  }
+
+  section.container#news {
+    @extend .pb-5;
+  }
+  
+  h3 {
+    @extend .py-2;
+  }
+  
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    max-width: 100%;
+  }
+  
+  .wrapper-border {
+    @extend .border-top, .border-bottom, .my-3, .py-3;
+  }
+  
+  .shows-wrapper {
+    .wrapper-border-show {
+      @extend .border-bottom, .mb-2, .pb-2;
+    }
+  
+    > div:first-of-type {
+      @extend .border-top, .mt-2, .pt-2;
+    }
+  }
+  

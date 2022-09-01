@@ -1,0 +1,6 @@
+node_modules/
+language/
+css/
+images/
+
+.DS_Store
