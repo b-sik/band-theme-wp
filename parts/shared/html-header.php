@@ -6,11 +6,11 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<title>
-		<?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?>
+		<?php wp_title(); ?>
 	</title>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico"/>
-	  <script src="https://kit.fontawesome.com/bdbf7f97f2.js" crossorigin="anonymous"></script>
+	  	<script src="https://kit.fontawesome.com/bdbf7f97f2.js" crossorigin="anonymous"></script>
 		<?php wp_head(); ?>
   </head>
 <body <?php body_class(); ?>>
