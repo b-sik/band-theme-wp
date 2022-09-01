@@ -291,3 +291,143 @@ function my_theme_setup() {
 			endif;
 		}
 	}
+
+
+	/**
+	 * Register Custom Navigation Walker
+	 */
+	function register_navwalker() {
+		require_once get_template_directory() . '/external/class-wp-bootstrap-navwalker.php';
+	}
+
+	add_action( 'after_setup_theme', 'register_navwalker' );
+
+	// Register Shows Post Type
+	function register_show_post_type() {
+		$labels = array(
+			'name'                  => _x( 'Shows', 'Post Type General Name', 'westferry' ),
+			'singular_name'         => _x( 'Show', 'Post Type Singular Name', 'westferry' ),
+			'menu_name'             => __( 'Shows', 'westferry' ),
+			'name_admin_bar'        => __( 'Shows', 'westferry' ),
+			'archives'              => __( 'Show Archives', 'westferry' ),
+			'attributes'            => __( 'Show Attributes', 'westferry' ),
+			'parent_item_colon'     => __( 'Parent Item:', 'westferry' ),
+			'all_items'             => __( 'All Shows', 'westferry' ),
+			'add_new_item'          => __( 'Add New Show', 'westferry' ),
+			'add_new'               => __( 'Add New', 'westferry' ),
+			'new_item'              => __( 'New Show', 'westferry' ),
+			'edit_item'             => __( 'Edit Show', 'westferry' ),
+			'update_item'           => __( 'Update Show', 'westferry' ),
+			'view_item'             => __( 'View Show', 'westferry' ),
+			'view_items'            => __( 'View Shows', 'westferry' ),
+			'search_items'          => __( 'Search Show', 'westferry' ),
+			'not_found'             => __( 'Not found', 'westferry' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'westferry' ),
+			'featured_image'        => __( 'Featured Image', 'westferry' ),
+			'set_featured_image'    => __( 'Set featured image', 'westferry' ),
+			'remove_featured_image' => __( 'Remove featured image', 'westferry' ),
+			'use_featured_image'    => __( 'Use as featured image', 'westferry' ),
+			'insert_into_item'      => __( 'Insert into item', 'westferry' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this item', 'westferry' ),
+			'items_list'            => __( 'Items list', 'westferry' ),
+			'items_list_navigation' => __( 'Items list navigation', 'westferry' ),
+			'filter_items_list'     => __( 'Filter items list', 'westferry' ),
+		);
+		$args   = array(
+			'label'               => __( 'Shows', 'westferry' ),
+			'description'         => __( 'Shows', 'westferry' ),
+			'labels'              => $labels,
+			'supports'            => array( 'title', 'thumbnail', 'custom-fields' ),
+			'hierarchical'        => false,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'menu_position'       => 5,
+			'menu_icon'           => 'dashicons-calendar-alt',
+			'show_in_admin_bar'   => true,
+			'show_in_nav_menus'   => true,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'page',
+		);
+		register_post_type( 'show', $args );
+	}
+	add_action( 'init', 'register_show_post_type', 0 );
+
+	// Register Album Post Type
+	function register_album_post_type() {
+
+		$labels = array(
+			'name'                  => _x( 'Albums', 'Post Type General Name', 'westferry' ),
+			'singular_name'         => _x( 'Album', 'Post Type Singular Name', 'westferry' ),
+			'menu_name'             => __( 'Albums', 'westferry' ),
+			'name_admin_bar'        => __( 'Albums', 'westferry' ),
+			'archives'              => __( 'Album Archives', 'westferry' ),
+			'attributes'            => __( 'Album Attributes', 'westferry' ),
+			'parent_item_colon'     => __( 'Parent Album:', 'westferry' ),
+			'all_items'             => __( 'All Albums', 'westferry' ),
+			'add_new_item'          => __( 'Add New Album', 'westferry' ),
+			'add_new'               => __( 'Add New', 'westferry' ),
+			'new_item'              => __( 'New Album', 'westferry' ),
+			'edit_item'             => __( 'Edit Album', 'westferry' ),
+			'update_item'           => __( 'Update Album', 'westferry' ),
+			'view_item'             => __( 'View Album', 'westferry' ),
+			'view_items'            => __( 'View Albums', 'westferry' ),
+			'search_items'          => __( 'Search Album', 'westferry' ),
+			'not_found'             => __( 'Not found', 'westferry' ),
+			'not_found_in_trash'    => __( 'Not found in Trash', 'westferry' ),
+			'featured_image'        => __( 'Featured Image', 'westferry' ),
+			'set_featured_image'    => __( 'Set featured image', 'westferry' ),
+			'remove_featured_image' => __( 'Remove featured image', 'westferry' ),
+			'use_featured_image'    => __( 'Use as featured image', 'westferry' ),
+			'insert_into_item'      => __( 'Insert into item', 'westferry' ),
+			'uploaded_to_this_item' => __( 'Uploaded to this item', 'westferry' ),
+			'items_list'            => __( 'Items list', 'westferry' ),
+			'items_list_navigation' => __( 'Items list navigation', 'westferry' ),
+			'filter_items_list'     => __( 'Filter items list', 'westferry' ),
+		);
+		$args   = array(
+			'label'               => __( 'Album', 'westferry' ),
+			'description'         => __( 'Albums', 'westferry' ),
+			'labels'              => $labels,
+			'supports'            => array( 'title', 'thumbnail', 'custom-fields' ),
+			'hierarchical'        => false,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'menu_position'       => 6,
+			'menu_icon'           => 'dashicons-album',
+			'show_in_admin_bar'   => true,
+			'show_in_nav_menus'   => true,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'page',
+		);
+		register_post_type( 'album', $args );
+	}
+	add_action( 'init', 'register_album_post_type', 0 );
+
+	// // Converts the Structure Tags in our permalink.
+	// function post_type_link($url, $post)
+	// {
+	// if ('show' === get_post_type($post)) {
+	// $show = get_field('show');
+	// $date = DateTime::createFromFormat("Ymd", $show['date']);
+
+	// $year = $date->format("Y");
+	// $month = $date->format("m");
+	// $day = $date->format("d");
+
+	// $url = str_replace("%year%", $year, $url);
+	// $url = str_replace("%month%", $month, $url);
+	// $url = str_replace("%day%", $day, $url);
+	// echo $url;
+	// }
+	// return $url;
+	// }
+
+	// add_filter('post_type_link', 'post_type_link', 10, 2);
