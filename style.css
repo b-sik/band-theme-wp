@@ -10818,9 +10818,23 @@ small > time,
   font-style: italic;
 }
 
+.navbar {
+  z-index: 1030;
+}
+
+.mobile-menu .nav-item {
+  width: 100%;
+}
+.mobile-menu .nav-item a {
+  font-size: 5rem !important;
+}
+
 .nav-item .nav-link {
   text-transform: uppercase !important;
   color: #12131d !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
 }
 .nav-item .nav-link:hover {
   background-color: #f7cb15;

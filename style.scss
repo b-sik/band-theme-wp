@@ -74,9 +74,26 @@ small {
   font-style: italic;
 }
 
+.navbar {
+  z-index: $zindex-fixed;
+}
+
+.mobile-menu {
+  .nav-item {
+    width: 100%;
+    a {
+      font-size: 5rem !important;
+    }
+  }
+}
+
 .nav-item .nav-link {
   text-transform: uppercase !important;
   color: $dark !important;
+  height: 100% !important;
+
+  display: flex;
+  align-items: center;
 
   &:hover {
     background-color: $primary;
