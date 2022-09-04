@@ -54,8 +54,9 @@ caption {
 }
 
 h3 {
-  color: $info !important;
-  text-transform: lowercase !important;
+  color: #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-transform: uppercase !important;
 }
 
 h5,
@@ -75,7 +76,7 @@ small {
 }
 
 .navbar {
-  z-index: $zindex-fixed;
+  z-index: 1034;
 }
 
 .mobile-menu {
@@ -127,6 +128,12 @@ header {
   position: fixed !important;
   height: 100%;
   z-index: -100;
+}
+
+#hero-content-overlay {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 .post-img {

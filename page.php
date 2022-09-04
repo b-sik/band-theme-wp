@@ -19,6 +19,7 @@ $bs_wp->get_template_parts(
 	array(
 		'parts/shared/html-header',
 		'parts/shared/header',
+		'parts/shared/featured-music',
 		'parts/shared/shows',
 		'parts/shared/listen',
 		'parts/shared/featured-video',
