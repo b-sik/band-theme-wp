@@ -2,7 +2,7 @@
 $page = get_page_by_title( 'About' );
 ?>
 
-<section id="about" class="container about-wrapper">
+<section id="about" class="container-fluid bg-dark about-wrapper py-5 gx-5">
 	<h3><?php echo __( 'About', 'westferry' ); ?></h3>
 
 	<div class="row justify-content-center">

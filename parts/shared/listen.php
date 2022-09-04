@@ -11,7 +11,7 @@ $albums_args = array(
 $query = new WP_Query( $albums_args );
 ?>
 
-<section id="listen" class="container listen-wrapper">
+<section id="listen" class="container-fluid listen-wrapper bg-dark py-5">
 	<!-- {{-- desktop --}} -->
 	<div class="carousel slide d-none d-lg-block" data-interval="false" id="postsCarousel">
 	<div class="container">

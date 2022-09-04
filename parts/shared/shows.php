@@ -22,7 +22,7 @@ $email   = get_field( 'email', $contact->ID );
 $query = new WP_Query( $shows_args );
 ?>
 
-<section id="shows" class="container shows-wrapper">
+<section id="shows" class="container-fluid shows-wrapper bg-dark py-5 d-flex flex-column justify-content-center">
 	<h3><?php echo __( 'Shows', 'westferry' ); ?></h3>
 
 	<?php if ( ! $query->have_posts() ) : ?>

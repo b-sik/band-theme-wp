@@ -18,7 +18,6 @@ $bs_wp->get_template_parts(
 	array(
 		'parts/shared/html-header',
 		'parts/shared/header',
-		'parts/shared/news',
 		'parts/shared/footer',
 		'parts/shared/html-footer',
 	)

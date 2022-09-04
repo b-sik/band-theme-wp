@@ -9,9 +9,9 @@
  *
  * Please see /external/bootsrap-utilities.php for info on BsWp::get_template_parts()
  *
- * @package 	WordPress
- * @subpackage 	Bootstrap 5.2.0
- * @autor 		Babobski
+ * @package     WordPress
+ * @subpackage  Bootstrap 5.2.0
+ * @autor       Babobski
  */
 $bs_wp = new BsWp();
 
@@ -19,11 +19,11 @@ $bs_wp->get_template_parts(
 	array(
 		'parts/shared/html-header',
 		'parts/shared/header',
-		'parts/shared/news',
-		'parts/shared/featured-video',
 		'parts/shared/shows',
 		'parts/shared/listen',
+		'parts/shared/featured-video',
 		'parts/shared/about',
+		'parts/shared/contact',
 		'parts/shared/footer',
 		'parts/shared/html-footer',
 	)
