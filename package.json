@@ -4,8 +4,8 @@
   "description": "indie band wordpress theme",
   "main": "index.js",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded style.scss:style.css",
-    "sass-prod": "sass --no-source-map --style=compressed style.scss:style.css"
+    "sass:watch": "sass --watch --update --style=expanded style.scss:style.css",
+    "sass:build": "sass --no-source-map --style=compressed style.scss:style.css"
   },
   "repository": {
     "type": "git",

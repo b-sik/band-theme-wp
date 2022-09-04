@@ -31,7 +31,7 @@ $socials            = get_field( 'social_media', $home->ID );
 $icons = array_merge( $streaming_services, $socials );
 ?>
 
-<header class="vh-100 d-flex flex-column">
+<header id="header" class="vh-100 d-flex flex-column position-relative">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-info bg-gradient py-2 py-lg-0 position-fixed vw-100">
 		<div class="row justify-content-apart px-2 mx-0 w-100">
 			<div class="col-9 col-lg-3 d-flex align-items-center ps-0">
@@ -55,7 +55,7 @@ $icons = array_merge( $streaming_services, $socials );
 					</div>
 				</div>
 				<div class="container h-100 d-flex d-lg-none align-items-center px-0">
-					<button class="navbar-toggle btn btn-primary ms-auto" type="button" data-bs-toggle="collapse"
+					<button id="navbar-toggle" class="navbar-toggle btn btn-primary ms-auto" type="button" data-bs-toggle="collapse"
 						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon d-flex align-items-center justify-content-center">

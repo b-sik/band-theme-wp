@@ -15,7 +15,7 @@ $icon_logo = get_site_icon_url();
 $icons = array_merge( $streaming_services, $socials );
 ?>
 
-<footer class="container-fluid justify-content-center vh-100 d-flex align-items-end flex-column mx-0 px-0" style="background-image: linear-gradient(to top, #0e0e2600, #0e0e26ff), url(<?php echo esc_attr( $contact_featured_img_url ); ?>);background-position:center bottom;background-size:cover;background-repeat:no-repeat;">
+<footer class="container-fluid justify-content-center vh-100 d-flex align-items-end flex-column mx-0 px-0" style="background-image: linear-gradient(to top, #0e0e2600 25%, #0e0e26ff), url(<?php echo esc_attr( $contact_featured_img_url ); ?>);background-position:center bottom;background-size:cover;background-repeat:no-repeat;">
 
 	<section id="contact" class="container contact-wrapper flex-grow-1 d-flex flex-column justify-content-center">
 		<h3 class="text-center"><?php echo __( 'Contact', 'westferry' ); ?></h3>
