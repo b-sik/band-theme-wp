@@ -22,9 +22,9 @@ $query = new WP_Query( $albums_args );
 							<h3><?php echo __( 'Listen', 'westferry' ); ?></h3>
 						</div>
 						<div class="col-6 text-md-right lead d-flex justify-content-end align-items-center">
-							<a class="btn btn-outline-primary prev" href="" title="go back"><i
+							<a class="btn btn-outline-white prev" href="" title="go back"><i
 									class="fa-solid fa-arrow-left"></i></a>
-							<a class="btn btn-outline-primary next me-3" href="" title="more"><i
+							<a class="btn btn-outline-white next me-3" href="" title="more"><i
 									class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
@@ -162,9 +162,9 @@ $query = new WP_Query( $albums_args );
 					</div>
 
 				<div class="w-100 d-flex justify-content-center">
-					<button class="btn btn-primary my-3 text-uppercase" type="button" data-bs-toggle="collapse"
+					<button class="btn btn-white my-3 text-uppercase" type="button" data-bs-toggle="collapse"
 						data-bs-target="#collapseAlbums" aria-expanded="false" aria-controls="collapseAlbums">
-						<?php echo __( 'Show all', 'westferry' ); ?>
+						&darr; more
 					</button>
 				</div>
 

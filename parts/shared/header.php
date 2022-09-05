@@ -70,9 +70,8 @@ $featured_img_url   = get_the_post_thumbnail_url( $home->ID );
 	</section>
 	<div id="hero-content-overlay" class="container-fluid min-vh-100 w-100 position-absolute px-2" style="z-index:1033;">
 		<div class="col-12 min-vh-100 w-100 d-flex flex-column justify-content-between text-center text-lg-start px-0">
-			<div class="text-outline d-flex">
+			<div class="text-outline">
 				<h1 style="color:#c270d6;"><em>west ferry</em></h1>
-			
 			</div>
 			<div class="text-outline" style="color:#fff;">
 				<h1>NEW EP 'OUT OF REACH'</h1>
