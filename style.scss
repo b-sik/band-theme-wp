@@ -18,7 +18,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 
-$primary: #f7cb15;
+$primary: #ff6e6e;
 $secondary: #4cb5ae;
 $dark: #0e0e26;
 $light: $gray-200;
@@ -69,6 +69,10 @@ small {
   }
 }
 
+.band-name {
+  color: $primary;
+}
+
 .h1.brand {
   font-family: 'Anonymous Pro', monospace !important;
   font-weight: 700;
@@ -116,7 +120,9 @@ header {
   }
 }
 
-.icon-anchor {
+.icon-anchor, .email-anchor {
+  color: $gray-100;
+
   &:hover {
     color: $primary !important;
   }
@@ -173,7 +179,6 @@ header {
 
   .card {
     width: 33%;
-    height: 100%;
   }
 
   &.carousel-item-right,
