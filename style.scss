@@ -163,14 +163,11 @@ header {
 }
 
 .carousel .card-deck {
-  .card {
-    @include media-breakpoint-up(xl) {
-      max-width: 320px !important;
-    }
+  max-height: 450px;
 
-    @include media-breakpoint-down(xl) {
-      max-width: 260px !important;
-    }
+  .card {
+    width: 33%;
+    height: 100%;
   }
 
   &.carousel-item-right,
@@ -184,6 +181,13 @@ header {
 
   &.active {
     @extend .justify-self-center !optional;
+  }
+}
+
+#collapseAlbums {
+  &.collapsing,
+  &.show {
+    display: flex;
   }
 }
 
@@ -209,22 +213,23 @@ h3 {
   @extend .border-top, .border-bottom, .my-3, .py-3;
 }
 
+.shows-section-col {
+  .show-wrapper:first-of-type {
+    @extend .border-top;
+  }
+}
+
 .shows-wrapper {
   .wrapper-border-show {
     @extend .border-bottom, .mb-2, .pb-2;
   }
 
-  > div:first-of-type {
-    @extend .border-top, .mt-2, .pt-2;
+ .show-wrapper{
+    @extend .pt-2;
   }
 }
 
 section,
 footer {
   z-index: 1031;
-
-  &:not(#contact) {
-    position: relative;
-    min-height: 100vh;
-  }
 }
