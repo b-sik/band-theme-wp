@@ -23,8 +23,8 @@ $menu_args_mobile = array(
 	'walker'          => new bootstrap_5_wp_nav_menu_walker(),
 );
 
-$band_name          = get_field( 'band_name', $home->ID );
-$featured_img_url   = get_the_post_thumbnail_url( $home->ID );
+$band_name        = get_field( 'band_name', $home->ID );
+$featured_img_url = get_the_post_thumbnail_url( $home->ID );
 ?>
 
 <header id="header" class="vh-100 d-flex flex-column position-relative">
@@ -65,13 +65,15 @@ $featured_img_url   = get_the_post_thumbnail_url( $home->ID );
 			</div>
 		</div>
 	</nav> -->
-	<section class="container-fluid hero flex-grow-1 mb-3 px-0"
+	<section id="hero" class="container-fluid hero flex-grow-1 mb-3 px-0"
 		style="background-image:url(<?php echo esc_attr( $featured_img_url ); ?>);background-position:center;background-size:cover;">
 	</section>
 	<div id="hero-content-overlay" class="container-fluid min-vh-100 w-100 position-absolute px-2" style="z-index:1033;">
 		<div class="col-12 min-vh-100 w-100 d-flex flex-column justify-content-between text-center text-lg-start px-0">
-			<div class="text-outline">
-				<h1 class="band-name"><em>west ferry</em></h1>
+			<div class="row flex-grow-1 position-relative">	
+				<div class="text-outline ">
+					<h1 class="band-name sticky-top"><em>west ferry</em></h1>
+				</div>
 			</div>
 			<div class="text-outline" style="color:#fff;">
 				<h1>NEW EP 'OUT OF REACH'</h1>

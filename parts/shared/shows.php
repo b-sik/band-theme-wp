@@ -23,7 +23,7 @@ $query = new WP_Query( $shows_args );
 ?>
 
 <section id="shows" class="container-fluid shows-wrapper bg-dark py-5 d-flex flex-column justify-content-center">
-	<div class="row flex-column">
+	<div class="row flex-column py-5">
 		<div class="shows-section-col col-10 offset-1">
 			<h3><?php echo __( 'Shows', 'westferry' ); ?></h3>
 

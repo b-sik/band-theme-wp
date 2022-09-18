@@ -43,7 +43,8 @@ $icons = array_merge( $streaming_services, $socials );
 		<div
 			class="col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-2 order-lg-0">
 			<small class='d-block'>
-			<!-- &copy;&nbsp;<?php echo date( 'Y' ); ?> |  -->
+			📸: <a href="https://peterheuer.com" target="_blank" rel="noopener noreferrer">Peter Heuer</a></small>
+			<small class='d-block'>
 			Made with 🖤 by <a href="https://bsik.dev" target="_blank" rel="noopener noreferrer">bsik.dev</a></small>
 		</div>
 		<!-- <div class="col-12 col-lg-2 d-flex justify-content-center align-items center">
