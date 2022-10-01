@@ -37,13 +37,13 @@ $query = new WP_Query( $albums_args );
 								<?php
 									$card_count = 0;
 
-									while ( $query->have_posts() ) :
-										$query->the_post();
-											$current_post_index = $query->current_post;
-											$total_posts        = $query->found_posts;
+								while ( $query->have_posts() ) :
+									$query->the_post();
+										$current_post_index = $query->current_post;
+										$total_posts        = $query->found_posts;
 
-										if ( $current_post_index % 3 === 0 ) :
-											?>
+									if ( $current_post_index % 3 === 0 ) :
+										?>
 											<div class="card-deck carousel-item <?php echo $current_post_index === 0 ? 'active' : ''; ?>">
 									<?php endif; ?>
 
@@ -84,7 +84,7 @@ $query = new WP_Query( $albums_args );
 									<!-- end album card -->
 
 									<?php
-										$card_count++;
+									$card_count++;
 
 
 									if ( $card_count === 3 || $current_post_index === $total_posts - 1 ) :
@@ -136,7 +136,7 @@ $query = new WP_Query( $albums_args );
 
 								<div class="card mb-3 mx-0 mx-sm-5 mx-md-1 rounded-0 w-md-50">
 									<div class="card-img-top">
-										<img class="img-fluid" src="<?php echo $artwork_url; ?>" alt="show flyer" />
+										<img class="img-fluid" src="<?php echo $artwork_url; ?>" alt="album cover" />
 									</div>
 
 									<div class="card-body pb-0">
@@ -176,7 +176,7 @@ $query = new WP_Query( $albums_args );
 							$current_post = $query->current_post;
 							$total_posts  = $query->found_posts;
 
-						if ( $current_post > 2 ) :
+						if ( $current_post >= 2 ) :
 							?>
 							<!-- album card -->
 							<?php
