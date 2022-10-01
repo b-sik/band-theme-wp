@@ -1,4 +1,4 @@
-<section id="newsletter" class="py-5 bg-dark">
+<section id="newsletter" class="pb-5 bg-dark">
 <?php
 $bs_wp = new BsWp();
 
