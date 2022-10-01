@@ -120,7 +120,8 @@ header {
   }
 }
 
-.icon-anchor, .email-anchor {
+.icon-anchor,
+.email-anchor {
   color: $gray-100;
 
   &:hover {
@@ -229,7 +230,7 @@ h3 {
     @extend .border-bottom, .mb-2, .pb-2;
   }
 
- .show-wrapper{
+  .show-wrapper {
     @extend .pt-2;
   }
 }
@@ -241,4 +242,37 @@ footer {
 
 .text-outline {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.newsletters-subscribe-form {
+  @extend .d-flex,
+    .align-items-center,
+    .align-items-sm-end,
+    .justify-content-center,
+    .flex-column,
+    .flex-sm-row;
+
+  .form-group {
+    @extend .flex-grow-1, .w-100;
+
+    .control-label {
+      @extend .text-center, .w-100, .ms-sm-5;
+    }
+
+    .form-control {
+      @extend .mb-3, .mt-2, .mb-sm-0;
+    }
+
+    button {
+      @extend .ms-3;
+    }
+  }
+
+  .help-block {
+    @extend .d-none;
+  }
+}
+
+.newsletters-acknowledgement {
+  @extend .text-center;
 }

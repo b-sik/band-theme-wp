@@ -1,9 +1,10 @@
 <?php
+$bs_wp = new BsWp();
+
 $contact                  = get_page_by_title( 'contact' );
 $email                    = get_field( 'email', $contact->ID );
 $email_exploded           = explode( '@', $email );
 $contact_featured_img_url = get_the_post_thumbnail_url( $contact->ID );
-
 
 $home               = get_page_by_title( 'home' );
 $socials            = get_field( 'social_media', $home->ID );
@@ -35,6 +36,13 @@ $icons = array_merge( $streaming_services, $socials );
 					</a>
 				<?php endforeach; ?>
 			</div>
+			<?php
+			$bs_wp->get_template_parts(
+				array(
+					'parts/components/newsletter',
+				)
+			);
+			?>
 		</div>
 
 	</section>
