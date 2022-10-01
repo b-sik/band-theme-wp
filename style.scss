@@ -256,7 +256,7 @@ footer {
     @extend .flex-grow-1, .w-100;
 
     .control-label {
-      @extend .text-center, .w-100, .ms-sm-5;
+      @extend .d-none;
     }
 
     .form-control {
