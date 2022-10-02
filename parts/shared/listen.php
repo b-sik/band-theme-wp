@@ -168,7 +168,7 @@ $query = new WP_Query( $albums_args );
 					</button>
 				</div>
 
-				<div id="collapseAlbums" class="card-deck flex-column flex-md-row collapse mt-3">
+				<div id="collapseAlbums" class="card-deck flex-column flex-lg-row collapse mt-3">
 					<?php
 					while ( $query->have_posts() ) :
 						$query->the_post();
@@ -194,7 +194,7 @@ $query = new WP_Query( $albums_args );
 
 								<div class="card mb-3 mx-0 mx-sm-5 mx-md-1 rounded-0 w-md-50">
 									<div class="card-img-top">
-										<img class="img-fluid" src="<?php echo $artwork_url; ?>" alt="show flyer" />
+										<img class="img-fluid w-100" src="<?php echo $artwork_url; ?>" alt="show flyer" />
 									</div>
 
 									<div class="card-body pb-0">
