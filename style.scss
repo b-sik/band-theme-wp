@@ -227,11 +227,15 @@ h3 {
 
 .shows-wrapper {
   .wrapper-border-show {
-    @extend .border-bottom, .mb-2, .pb-2;
+    @extend .border-bottom, .pb-2;
   }
 
   .show-wrapper {
     @extend .pt-2;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 
@@ -275,4 +279,9 @@ footer {
 
 .newsletters-acknowledgement {
   @extend .text-center;
+}
+
+#flyer a:hover {
+  transform: scale(1.01);
+  transition: all .1s;
 }

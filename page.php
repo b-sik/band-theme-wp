@@ -20,6 +20,7 @@ $bs_wp->get_template_parts(
 		'parts/shared/html-header',
 		'parts/shared/header',
 		'parts/shared/featured-music',
+		'parts/shared/flyer',
 		'parts/shared/shows',
 		'parts/shared/newsletter',
 		'parts/shared/listen',
