@@ -28,7 +28,7 @@ $featured_img_url = get_the_post_thumbnail_url( $home->ID );
 ?>
 
 <header id="header" class="vh-100 d-flex flex-column position-relative">
-	<a class="d-none" rel="me" href="https://indieweb.social/@bsik234">Mastodon</a>
+	<a class="d-none" rel="me" href="https://mstdn.social/@bsik">Mastodon</a>
 	<section id="hero" class="container-fluid hero flex-grow-1 mb-3 px-0"
 		style="background-image:url(<?php echo esc_attr( $featured_img_url ); ?>);background-position:center;background-size:cover;">
 	</section>
