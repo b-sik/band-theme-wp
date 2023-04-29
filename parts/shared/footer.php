@@ -51,9 +51,11 @@ $icons = array_merge( $streaming_services, $socials );
 		<div
 			class="col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-2 order-lg-0">
 			<small class='d-block'>
-			📸: <a href="https://peterheuer.com" target="_blank" rel="noopener noreferrer">Peter Heuer</a></small>
+				📸: <a href="https://peterheuer.com" target="_blank" rel="noopener noreferrer">Peter Heuer</a> & <a href="https://www.instagram.com/zachmandrsn/" target="_blank" rel="noopener noreferrer">Zach Anderson</a>
+			</small>
 			<small class='d-block'>
-			Made with 🖤 by <a href="https://bsik.dev" target="_blank" rel="noopener noreferrer">bsik.dev</a></small>
+				Made with 🖤 by <a href="https://bsik.dev" target="_blank" rel="noopener noreferrer">bsik.dev</a>
+			</small>
 		</div>
 		<!-- <div class="col-12 col-lg-2 d-flex justify-content-center align-items center">
 			<img src="<?php echo $icon_logo; ?>" class="img-fluid w-50 mb-3 mb-lg-0" style="max-width:100px;height:auto;">
