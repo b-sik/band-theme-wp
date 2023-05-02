@@ -39,11 +39,15 @@ $featured_img_url = get_the_post_thumbnail_url( $home->ID );
 					<h1 class="band-name sticky-top"><em>west ferry</em></h1>
 				</div>
 			</div>
-			<div class="text-outline" style="color:#fff;">
-				<h1>NEW EP 'OUT OF REACH'</h1>
-				<h2>available now</h2>
+			<div class="row px-2">
+				<div class="text-outline col-lg-9" style="color:#fff;">
+					<h1>NEW EP 'OUT OF REACH'</h1>
+					<h2>available now</h2>
+				</div>
+				<div class="col-lg-3 d-flex align-items-center">
+					<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/78ClihQBWOkKN4hnCYyeTB?utm_source=generator" width="100%" height="90" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+				</div>
 			</div>
 		</div>
 	</div>
 </header>
-
