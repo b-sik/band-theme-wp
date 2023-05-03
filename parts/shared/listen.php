@@ -18,11 +18,9 @@ $query = new WP_Query( $albums_args );
 			<div class="carousel slide d-none d-lg-block" data-interval="false" id="postsCarousel">
 				<div class="container">
 					<div class="row">
-						<div class="col-6 ps-0">
-							<h3><?php echo __( 'Listen', 'westferry' ); ?></h3>
-						</div>
-						<div class="col-6 text-md-right lead d-flex justify-content-end align-items-center">
+						<div class="text-md-right lead d-flex justify-content-center align-items-center">
 							<a class="btn btn-outline-white prev" href="" title="go back"><i class="fa-solid fa-arrow-left"></i></a>
+							<h3 class="mb-0 mx-3"><?php echo __( 'Listen', 'westferry' ); ?></h3>
 							<a class="btn btn-outline-white next me-3" href="" title="more"><i class="fa-solid fa-arrow-right"></i></a>
 						</div>
 					</div>
@@ -99,7 +97,7 @@ $query = new WP_Query( $albums_args );
 
 			<!-- {{-- mobile & tablet --}} -->
 			<div class="row justify-content-center d-lg-none">
-				<div class="container">
+				<div class="container text-center">
 					<h3><?php echo __( 'Listen', 'westferry' ); ?></h3>
 				</div>
 

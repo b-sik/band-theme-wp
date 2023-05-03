@@ -24,11 +24,11 @@ $query = new WP_Query( $shows_args );
 
 <section id="shows" class="container-fluid shows-wrapper bg-dark py-5 d-flex flex-column justify-content-center">
 	<div class="row flex-column py-5">
-		<div class="shows-section-col col-10 offset-1">
+		<div class="shows-section-col col-10 offset-1 text-center">
 			<h3><?php echo __( 'Shows', 'westferry' ); ?></h3>
 
 			<?php if ( ! $query->have_posts() ) : ?>
-				<div class="container show-wrapper wrapper-border-show text-center">
+				<div class="container show-wrapper wrapper-border-show">
 					<p class="my-3">No shows currently booked! Reach out to us at <a
 							href='mailto:<?php echo $email; ?>'><?php echo $email; ?></a>.</p>
 				</div>
