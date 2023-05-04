@@ -11,8 +11,6 @@ $socials            = get_field( 'social_media', $home->ID );
 $streaming_services = get_field( 'streaming_services', $home->ID );
 $footer_text        = get_field( 'footer_text', $home->ID );
 
-$icon_logo = get_site_icon_url();
-
 $icons = array_merge( $streaming_services, $socials );
 ?>
 
@@ -50,15 +48,10 @@ $icons = array_merge( $streaming_services, $socials );
 	<div class="row py-2 mx-0 w-100">
 		<div
 			class="col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-2 order-lg-0">
-			<small class='d-block'>
-				📸: <a href="https://peterheuer.com" target="_blank" rel="noopener noreferrer">Peter Heuer</a> & <a href="https://www.instagram.com/zachmandrsn/" target="_blank" rel="noopener noreferrer">Zach Anderson</a>
-			</small>
-			<small class='d-block'>
-				Made with 🖤 by <a href="https://bsik.dev" target="_blank" rel="noopener noreferrer">bsik.dev</a>
+			<small>
+				<?php echo $footer_text; ?>
+				<p class="m-0 p-0">Made with 🖤 by <a href="https://bsik.dev" target="_blank" rel="noopener noreferrer">bsik.dev</a></p>
 			</small>
 		</div>
-		<!-- <div class="col-12 col-lg-2 d-flex justify-content-center align-items center">
-			<img src="<?php echo $icon_logo; ?>" class="img-fluid w-50 mb-3 mb-lg-0" style="max-width:100px;height:auto;">
-		</div> -->
 	</div>
 </footer>

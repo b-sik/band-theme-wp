@@ -33,8 +33,8 @@ function my_theme_setup() {
 	======================================================================================================================== */
 
 	require_once 'external/bootstrap-utilities.php';
-	require_once 'external/bs5navwalker.php';
-	require_once 'external/class-wp-bootstrap-navwalker.php';
+	// require_once 'external/bs5navwalker.php';
+	// require_once 'external/class-wp-bootstrap-navwalker.php';
 
 	/*
 	 ========================================================================================================================
@@ -296,11 +296,11 @@ function my_theme_setup() {
 	/**
 	 * Register Custom Navigation Walker
 	 */
-	function register_navwalker() {
-		require_once get_template_directory() . '/external/class-wp-bootstrap-navwalker.php';
-	}
+	// function register_navwalker() {
+	// 	require_once get_template_directory() . '/external/class-wp-bootstrap-navwalker.php';
+	// }
 
-	add_action( 'after_setup_theme', 'register_navwalker' );
+	// add_action( 'after_setup_theme', 'register_navwalker' );
 
 	// Register Shows Post Type
 	function register_show_post_type() {
@@ -587,198 +587,233 @@ function my_theme_setup() {
 			)
 		);
 
-		acf_add_local_field_group(
-			array(
-				'key'                   => 'group_62043549b32a6',
-				'title'                 => 'Branding and Social',
-				'fields'                => array(
+		add_action( 'acf/include_fields', function() {
+			if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+				return;
+			}
+		
+			acf_add_local_field_group( array(
+				'key' => 'group_62043549b32a6',
+				'title' => 'Branding and Social',
+				'fields' => array(
 					array(
-						'key'               => 'field_6204356eeebf7',
-						'label'             => 'Band name',
-						'name'              => 'band_name',
-						'type'              => 'text',
-						'instructions'      => '',
-						'required'          => 0,
+						'key' => 'field_6204356eeebf7',
+						'label' => 'Band name',
+						'name' => 'band_name',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
 						'conditional_logic' => 0,
-						'wrapper'           => array(
+						'wrapper' => array(
 							'width' => '',
 							'class' => '',
-							'id'    => '',
+							'id' => '',
 						),
-						'default_value'     => '',
-						'placeholder'       => '',
-						'prepend'           => '',
-						'append'            => '',
-						'maxlength'         => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
 					),
 					array(
-						'key'               => 'field_6209900f79899',
-						'label'             => 'Social Media',
-						'name'              => 'social_media',
-						'type'              => 'group',
-						'instructions'      => '',
-						'required'          => 0,
+						'key' => 'field_6209900f79899',
+						'label' => 'Social Media',
+						'name' => 'social_media',
+						'aria-label' => '',
+						'type' => 'group',
+						'instructions' => '',
+						'required' => 0,
 						'conditional_logic' => 0,
-						'wrapper'           => array(
+						'wrapper' => array(
 							'width' => '',
 							'class' => '',
-							'id'    => '',
+							'id' => '',
 						),
-						'layout'            => 'block',
-						'sub_fields'        => array(
+						'layout' => 'block',
+						'sub_fields' => array(
 							array(
-								'key'               => 'field_620990497989b',
-								'label'             => 'Facebook',
-								'name'              => 'facebook',
-								'type'              => 'link',
-								'instructions'      => '',
-								'required'          => 0,
+								'key' => 'field_620990497989b',
+								'label' => 'Facebook',
+								'name' => 'facebook',
+								'aria-label' => '',
+								'type' => 'link',
+								'instructions' => '',
+								'required' => 0,
 								'conditional_logic' => 0,
-								'wrapper'           => array(
+								'wrapper' => array(
 									'width' => '',
 									'class' => '',
-									'id'    => '',
+									'id' => '',
 								),
-								'return_format'     => 'array',
+								'return_format' => 'array',
 							),
 							array(
-								'key'               => 'field_620990577989c',
-								'label'             => 'Instagram',
-								'name'              => 'instagram',
-								'type'              => 'link',
-								'instructions'      => '',
-								'required'          => 0,
+								'key' => 'field_620990577989c',
+								'label' => 'Instagram',
+								'name' => 'instagram',
+								'aria-label' => '',
+								'type' => 'link',
+								'instructions' => '',
+								'required' => 0,
 								'conditional_logic' => 0,
-								'wrapper'           => array(
+								'wrapper' => array(
 									'width' => '',
 									'class' => '',
-									'id'    => '',
+									'id' => '',
 								),
-								'return_format'     => 'array',
-							),
-						),
-					),
-					array(
-						'key'               => 'field_620990277989a',
-						'label'             => 'Streaming Services',
-						'name'              => 'streaming_services',
-						'type'              => 'group',
-						'instructions'      => '',
-						'required'          => 0,
-						'conditional_logic' => 0,
-						'wrapper'           => array(
-							'width' => '',
-							'class' => '',
-							'id'    => '',
-						),
-						'layout'            => 'block',
-						'sub_fields'        => array(
-							array(
-								'key'               => 'field_620990785468b',
-								'label'             => 'Spotify',
-								'name'              => 'spotify',
-								'type'              => 'link',
-								'instructions'      => '',
-								'required'          => 0,
-								'conditional_logic' => 0,
-								'wrapper'           => array(
-									'width' => '',
-									'class' => '',
-									'id'    => '',
-								),
-								'return_format'     => 'array',
-							),
-							array(
-								'key'               => 'field_620990855468c',
-								'label'             => 'Apple Music',
-								'name'              => 'apple_music',
-								'type'              => 'link',
-								'instructions'      => '',
-								'required'          => 0,
-								'conditional_logic' => 0,
-								'wrapper'           => array(
-									'width' => '',
-									'class' => '',
-									'id'    => '',
-								),
-								'return_format'     => 'array',
-							),
-							array(
-								'key'               => 'field_620990955468d',
-								'label'             => 'Bandcamp',
-								'name'              => 'bandcamp',
-								'type'              => 'link',
-								'instructions'      => '',
-								'required'          => 0,
-								'conditional_logic' => 0,
-								'wrapper'           => array(
-									'width' => '',
-									'class' => '',
-									'id'    => '',
-								),
-								'return_format'     => 'array',
+								'return_format' => 'array',
 							),
 						),
 					),
 					array(
-						'key'               => 'field_620a8ca163dbc',
-						'label'             => 'Contact Email',
-						'name'              => 'contact_email',
-						'type'              => 'text',
-						'instructions'      => '',
-						'required'          => 0,
+						'key' => 'field_620990277989a',
+						'label' => 'Streaming Services',
+						'name' => 'streaming_services',
+						'aria-label' => '',
+						'type' => 'group',
+						'instructions' => '',
+						'required' => 0,
 						'conditional_logic' => 0,
-						'wrapper'           => array(
+						'wrapper' => array(
 							'width' => '',
 							'class' => '',
-							'id'    => '',
+							'id' => '',
 						),
-						'default_value'     => '',
-						'placeholder'       => '',
-						'prepend'           => '',
-						'append'            => '',
-						'maxlength'         => '',
+						'layout' => 'block',
+						'sub_fields' => array(
+							array(
+								'key' => 'field_620990785468b',
+								'label' => 'Spotify',
+								'name' => 'spotify',
+								'aria-label' => '',
+								'type' => 'link',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'return_format' => 'array',
+							),
+							array(
+								'key' => 'field_620990855468c',
+								'label' => 'Apple Music',
+								'name' => 'apple_music',
+								'aria-label' => '',
+								'type' => 'link',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'return_format' => 'array',
+							),
+							array(
+								'key' => 'field_620990955468d',
+								'label' => 'Bandcamp',
+								'name' => 'bandcamp',
+								'aria-label' => '',
+								'type' => 'link',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'return_format' => 'array',
+							),
+						),
 					),
 					array(
-						'key'               => 'field_620a8f7713d16',
-						'label'             => 'Footer Text',
-						'name'              => 'footer_text',
-						'type'              => 'wysiwyg',
-						'instructions'      => '',
-						'required'          => 0,
+						'key' => 'field_620a8ca163dbc',
+						'label' => 'Contact Email',
+						'name' => 'contact_email',
+						'aria-label' => '',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
 						'conditional_logic' => 0,
-						'wrapper'           => array(
+						'wrapper' => array(
 							'width' => '',
 							'class' => '',
-							'id'    => '',
+							'id' => '',
 						),
-						'default_value'     => '',
-						'tabs'              => 'all',
-						'toolbar'           => 'full',
-						'media_upload'      => 1,
-						'delay'             => 0,
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_620a8f7713d16',
+						'label' => 'Footer Text',
+						'name' => 'footer_text',
+						'aria-label' => '',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'tabs' => 'all',
+						'toolbar' => 'full',
+						'media_upload' => 1,
+						'delay' => 0,
+					),
+					array(
+						'key' => 'field_6453e996daaf4',
+						'label' => 'Header Shoutout',
+						'name' => 'header_shoutout',
+						'aria-label' => '',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'tabs' => 'all',
+						'toolbar' => 'full',
+						'media_upload' => 1,
+						'delay' => 0,
 					),
 				),
-				'location'              => array(
+				'location' => array(
 					array(
 						array(
-							'param'    => 'page',
+							'param' => 'page',
 							'operator' => '==',
-							'value'    => '5',
+							'value' => '5',
 						),
 					),
 				),
-				'menu_order'            => 0,
-				'position'              => 'normal',
-				'style'                 => 'default',
-				'label_placement'       => 'top',
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
 				'instruction_placement' => 'label',
-				'hide_on_screen'        => '',
-				'active'                => true,
-				'description'           => '',
-				'show_in_rest'          => 0,
-			)
-		);
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+				'show_in_rest' => 0,
+			) );
+		} );
+				
 
 		acf_add_local_field_group(
 			array(

@@ -24,6 +24,7 @@ $bs_wp->get_template_parts(
 		'parts/shared/shows',
 		'parts/shared/newsletter',
 		'parts/shared/listen',
+		// 'parts/shared/news',
 		'parts/shared/featured-video',
 		'parts/shared/about',
 		'parts/shared/contact',

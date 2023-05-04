@@ -11,8 +11,8 @@ $latest_post_args = array(
 $query = new WP_Query( $latest_post_args );
 ?>
 
-<section id="news" <?php echo post_class( 'container pt-3' ); ?>>
-	<h3><?php echo __( 'News', 'westferry' ); ?></h3>
+<section id="news" <?php echo post_class( 'container-fluid p-3 bg-dark' ); ?>>
+	<h3 class="text-center"><?php echo __( 'News', 'westferry' ); ?></h3>
 
 	<?php
 	while ( $query->have_posts() ) :
@@ -26,7 +26,7 @@ $query = new WP_Query( $latest_post_args );
 			$show_url = get_field( 'url', $show_id );
 		?>
 
-		<article class="row wrapper-border d-flex flex-column flex-md-row">
+		<article class="row border-top border-bottom d-flex flex-column flex-md-row py-3 mx-5">
 			<div class="col-2 mb-md-1 d-flex align-items-center">
 				<small><time class="updated"
 						datetime="<?php echo get_post_time( 'c', true ); ?>"><?php echo get_the_date( 'm.d.y' ); ?></time></small>
