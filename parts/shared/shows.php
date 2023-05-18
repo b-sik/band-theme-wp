@@ -55,7 +55,7 @@ $query = new WP_Query( $shows_args );
 							<span class="date_time pb-1"><strong><?php echo $date; ?></strong></span>
 							<span class="city pt-1"><?php echo $city; ?></span>
 						</div>
-						<div class="col-6 ps-lg-5 d-none d-lg-flex flex-column justify-content-center">
+						<div class="col-6 ps-lg-5 d-none d-lg-flex flex-column justify-content-center text-start">
 							<span class="venue pb-1"><?php echo $venue; ?></span>
 							<span class="support pt-1">w/&nbsp;<?php echo $support; ?></span>
 						</div>
@@ -63,10 +63,10 @@ $query = new WP_Query( $shows_args );
 						<!-- mobile -->
 						<div
 							class="col-12 col-sm-8 d-flex d-lg-none flex-column align-items-center align-items-sm-start justify-content-center">
-							<span class="date_time text-center text-sm-left"><strong><?php echo $date; ?></strong></span>
-							<span class="city text-center text-sm-left"><?php echo $city; ?></span>
-							<span class="venue text-center text-sm-left"><?php echo $venue; ?></span>
-							<span class="support text-center text-sm-left">w/&nbsp;<?php echo $support; ?></span>
+							<span class="date_time text-center text-sm-start"><strong><?php echo $date; ?></strong></span>
+							<span class="city text-center text-sm-start"><?php echo $city; ?></span>
+							<span class="venue text-center text-sm-start"><?php echo $venue; ?></span>
+							<span class="support text-center text-sm-start">w/&nbsp;<?php echo $support; ?></span>
 						</div>
 
 						<!-- button -->
