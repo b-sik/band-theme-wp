@@ -1,12 +1,12 @@
 <?php
 $bs_wp = new BsWp();
 
-$contact                  = get_page_by_title( 'contact' );
+$contact                  = bsik_get_page_by_title( 'contact' );
 $email                    = get_field( 'email', $contact->ID );
 $email_exploded           = explode( '@', $email );
 $contact_featured_img_url = get_the_post_thumbnail_url( $contact->ID );
 
-$home               = get_page_by_title( 'home' );
+$home               = bsik_get_page_by_title( 'home' );
 $socials            = get_field( 'social_media', $home->ID );
 $streaming_services = get_field( 'streaming_services', $home->ID );
 $footer_text        = get_field( 'footer_text', $home->ID );
@@ -36,25 +36,18 @@ $icons = array_merge( $streaming_services, $socials );
 					</a>
 				<?php endforeach; ?>
 			</div>
-			<?php
-			$bs_wp->get_template_parts(
-				array(
-					'parts/components/newsletter',
-				)
-			);
-			?>
 		</div>
 
 	</section>
 
 	<div class="row py-2 mx-0 w-100">
 		<div
-			class="col-12 d-flex flex-column align-items-center align-items-lg-start justify-content-center order-2 order-lg-0">
+			class="col-12 d-flex flex-column align-items-center justify-content-center order-2 order-lg-0">
 			<small class='d-block'>
 				📸: <a href="https://peterheuer.com" target="_blank" rel="noopener noreferrer">Peter Heuer</a> & <a href="https://www.instagram.com/zachmandrsn/" target="_blank" rel="noopener noreferrer">Zach Anderson</a>
 			</small>
 			<small class='d-block'>
-				Made with 🖤 by <a href="https://bsik.dev" target="_blank" rel="noopener noreferrer">bsik.dev</a>
+				Made with 🖤 by <a href="https://bsik.net" target="_blank" rel="noopener noreferrer">bsik.net</a>
 			</small>
 		</div>
 		<!-- <div class="col-12 col-lg-2 d-flex justify-content-center align-items center">

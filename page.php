@@ -22,7 +22,6 @@ $bs_wp->get_template_parts(
 		'parts/shared/featured-music',
 		'parts/shared/flyer',
 		'parts/shared/shows',
-		'parts/shared/newsletter',
 		'parts/shared/listen',
 		'parts/shared/featured-video',
 		'parts/shared/about',

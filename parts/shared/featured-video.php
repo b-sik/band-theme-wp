@@ -1,5 +1,5 @@
 <?php
-$home       = get_page_by_title( 'home' );
+$home       = bsik_get_page_by_title( 'home' );
 $video      = get_field( 'featured_video', $home->ID, false, false );
 $video_desc = get_field( 'featured_video_desc', $home->ID );
 ?>

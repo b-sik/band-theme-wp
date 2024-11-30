@@ -1,5 +1,5 @@
 <?php
-$home = get_page_by_title( 'home' );
+$home = bsik_get_page_by_title( 'home' );
 
 $streaming_services = get_field( 'streaming_services', $home->ID );
 $socials            = get_field( 'social_media', $home->ID );

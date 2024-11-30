@@ -16,7 +16,7 @@ $shows_args = array(
 	'order'          => 'ASC',
 );
 
-$contact = get_page_by_title( 'contact' );
+$contact = bsik_get_page_by_title( 'contact' );
 $email   = get_field( 'email', $contact->ID );
 
 $query = new WP_Query( $shows_args );
@@ -32,20 +32,23 @@ $query = new WP_Query( $shows_args );
 					<p class="my-3">No shows currently booked! Reach out to us at <a
 							href='mailto:<?php echo $email; ?>'><?php echo $email; ?></a>.</p>
 				</div>
-			<? endif;
+				<?php
+endif;
+			?>
 
-			while ($query->have_posts()) :
+<?php
+while ( $query->have_posts() ) :
 				$query->the_post();
-				
+
 					$fields = get_fields();
 					$fields = $fields['show'];
-					
-					$city = $fields['city'];
-					$venue = $fields['venue'];
-					$date = date('m.d.y', strtotime($fields['date']));
+
+					$city    = $fields['city'];
+					$venue   = $fields['venue'];
+					$date    = date( 'm.d.y', strtotime( $fields['date'] ) );
 					$support = $fields['support'];
-					$url = $fields['url'];
-				?>
+					$url     = $fields['url'];
+	?>
 
 				<div class="container-fluid container-md show-wrapper wrapper-border-show my-0">
 					<div class="row flex-column flex-sm-row">

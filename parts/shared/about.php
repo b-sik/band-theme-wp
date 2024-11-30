@@ -1,5 +1,5 @@
 <?php
-$page = get_page_by_title( 'About' );
+$page = bsik_get_page_by_title( 'About' );
 ?>
 
 <section id="about" class="container-fluid bg-dark about-wrapper py-5 min-vh-100">
