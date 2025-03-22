@@ -1,7 +1,5 @@
-Bootstrap on WordPress
+Band Theme WP
 ===========
-Bootstrap on WordPress is a blank bootstrap 5 ready WordPress theme.
+Based on [Bootstrap on WordPress](https://bootstraponwordpress.com/)
 
-For the full documentation visit the [Bootstrap on WordPress](https://bootstraponwordpress.com/) website.  
-
-![Bootstrap on WordPress](preview.jpg)
+See project at https://westferry.bsik.net
